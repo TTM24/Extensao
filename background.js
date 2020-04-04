@@ -5,7 +5,7 @@ chrome.runtime.onMessage.addListener(receiver);
 
 window.word = "coding train";
 
-//funcão receiverr
+//funcão receiver
 function receiver (request, sender, sendResponse) {
 	console.log(request);
 	word = request;
