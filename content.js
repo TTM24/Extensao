@@ -1,5 +1,8 @@
 //---------------------------------------------- SAGE JOURNALS ----------------------------------------------------------
 
+if(window.location.origin=='https://journals.sagepub.com'){
+	console.log(window.location.origin);
+
 //Buscar titulo pagina
 let title = document.getElementsByClassName('publicationContentTitle');
 
@@ -17,7 +20,6 @@ let data = document.getElementsByClassName('publicationContentEpubDate dates');
 //Buscar Informação
 let info = document.getElementsByClassName('Article information');
 
-console.log(data[0].innerText);
 
 //Buscar DOI
 let doi = document.getElementsByClassName('doiWidgetContainer');
@@ -27,7 +29,6 @@ let doi = document.getElementsByClassName('doiWidgetContainer');
 //Buscar Abstract
 let resumo = document.getElementsByClassName('abstractSection abstractInFull');
 
-console.log(resumo[0].innerText);
 
 //Constroi mensagem para o background
 let message = {
@@ -42,14 +43,26 @@ let message = {
 
 console.log(message);
 
-
 //Envia mensagem
 chrome.runtime.sendMessage(message);
 
-//---------------------------------------------------------- PAPERS SSRN -------------------------------------------
+};
 
-//Buscar titulo document.getElementsByTagName('h1')[0].innerText;
+//---------------------------------------- LINK SPRINGER ---------------------------------------------------
 
-//Buscar
+if(window.location.origin=='https://link.springer.com'){
+	console.log(window.location.origin);
 
 
+//Buscar titulo
+let titleSpringer = document.getElementsByClassName('c-article-title u-h1')[0].innerText;
+console.log(titleSpringer);
+
+//Buscar ano
+let anoSpringer = document.getElementsByClassName('c-article-identifiers__item')[1].innerText;
+console.log(anoSpringer);
+
+//Buscar autor
+let autorSpringer = document.getElementsByClassName('c-author-list js-etal-collapsed')[0].innerText;
+console.log(autorSpringer);
+};
