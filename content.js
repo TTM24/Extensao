@@ -73,4 +73,8 @@ console.log(doiSpringer);
 //Buscar abstract
 let abstractSpringer = document.getElementsByClassName('c-article-section__content')[0].innerText;
 console.log(abstractSpringer);
+
+//Buscar journal
+let journalSpringer = document.getElementsByClassName('c-article-info-details')[0].innerText.slice("Cite this article").replace('Cite this article','');
+console.log(journalSpringer);
 };
