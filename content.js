@@ -65,4 +65,8 @@ console.log(anoSpringer);
 //Buscar autor
 let autorSpringer = document.getElementsByClassName('c-author-list js-etal-collapsed')[0].innerText;
 console.log(autorSpringer);
+
+//Buscar DOI
+let doiSpringer = document.getElementsByClassName('u-clearfix c-bibliographic-information__value')[5].innerText;
+console.log(doiSpringer);
 };
