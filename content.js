@@ -77,4 +77,18 @@ console.log(abstractSpringer);
 //Buscar journal
 let journalSpringer = document.getElementsByClassName('c-article-info-details')[0].innerText.slice("Cite this article").replace('Cite this article','');
 console.log(journalSpringer);
+
+//Constroi mensagem para o background Springer
+let messageSpringer = {
+	titleSpringer: titleSpringer,
+	anoSpringer: anoSpringer,
+	autorSpringer: autorSpringer,
+	doiSpringer: doiSpringer,
+	abstractSpringer: abstractSpringer,
+	journalSpringer: journalSpringer
+};
+
+console.log(messageSpringer);
+
+
 };
