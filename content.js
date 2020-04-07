@@ -90,5 +90,8 @@ let messageSpringer = {
 
 console.log(messageSpringer);
 
+//Envia mensagem springer
+chrome.runtime.sendMessage(messageSpringer);
+
 
 };
