@@ -80,12 +80,12 @@ console.log(journalSpringer);
 
 //Constroi mensagem para o background Springer
 let messageSpringer = {
-	titleSpringer: titleSpringer,
-	anoSpringer: anoSpringer,
-	autorSpringer: autorSpringer,
-	doiSpringer: doiSpringer,
-	abstractSpringer: abstractSpringer,
-	journalSpringer: journalSpringer
+	titulo: titleSpringer,
+	ano: anoSpringer,
+	autor: autorSpringer,
+	doi: doiSpringer,
+	resumo: abstractSpringer,
+	info: journalSpringer
 };
 
 console.log(messageSpringer);

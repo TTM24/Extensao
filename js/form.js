@@ -13,14 +13,14 @@ $(function () {
   $('#title').val(objeto.titulo);
 });
 
-//set valor autor
+/*set valor autor
 $(function () {
   $('#autor').val(objeto.autor);
-});
+});*/
 
 //set valor autor info
 $(function () {
-  $('#autor_info').val(objeto.autor_info);
+  $('#autor_info').val(objeto.autor);
 });
 
 //set valor info
