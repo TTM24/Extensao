@@ -95,3 +95,46 @@ chrome.runtime.sendMessage(messageSpringer);
 
 
 };
+
+
+//------------------------------------------------------ IEEE ---------------------------------------------
+
+
+if(window.location.origin=='https://ieeexplore.ieee.org'){
+	console.log(window.location.origin);
+
+	//Buscar autor
+	let autorIEEE = document.getElementsByClassName('authors-container stats-document-authors-banner-authorsContainer')[0].innerText;
+
+
+	//Buscar abstract 
+	let abstractIEEE = document.getElementsByClassName('abstract-text row')[0].innerText;
+
+	//Buscar titulo
+	let titleIEEE = document.getElementsByClassName('document-title')[0].innerText;
+
+	//Buscar DOI
+	let doiIEEE = document.getElementsByClassName('u-pb-1 stats-document-abstract-doi')[0].innerText.slice("DOI: ").replace('DOI: ','');
+
+	//Buscar ano
+	let anoIEEE = document.getElementsByClassName('u-pb-1 doc-abstract-pubdate')[0].innerText;
+	
+	//Buscar journal
+	let journalIEEE = document.getElementsByClassName('u-pb-1 stats-document-abstract-publishedIn')[0].innerText.slice("Published in: ").replace('Published in: ','');
+
+	//Constroi mensagem para o background Springer
+let messageIEEE = {
+	titulo: titleIEEE,
+	ano: anoIEEE,
+	autor: autorIEEE,
+	doi: doiIEEE,
+	resumo: abstractIEEE,
+	info: journalIEEE
+};
+
+console.log(messageIEEE);
+
+//Envia mensagem springer
+chrome.runtime.sendMessage(messageIEEE);
+
+};
