@@ -138,3 +138,5 @@ console.log(messageIEEE);
 chrome.runtime.sendMessage(messageIEEE);
 
 };
+
+//-------------------------------------------- PDF -----------------------------------------------------------
