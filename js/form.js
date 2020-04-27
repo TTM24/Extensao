@@ -3,9 +3,7 @@ let objeto = bgpage.word
 
 console.log(objeto);
 
-if (objeto != "coding train") {  
-
-//set valor DOI
+  //set valor DOI
 $(function () {
   $('#doi').val(objeto.doi);
 });
@@ -41,10 +39,11 @@ $("input:radio[name='rating']").change(function () {
     console.log(rating);
 
 });
-}
 
-//preencher campos PDF
-if (objeto = "coding train"){
+
+/*preencher campos PDF
+if (objeto.ano = undefined){
+  console.log(objeto);
   $.get("http://127.0.0.1:5000/", function(data, status){
   let dataObj = jQuery.parseJSON(data);
   console.log(dataObj);
@@ -65,7 +64,7 @@ if (objeto = "coding train"){
   });
 
   })
-};
+};*/
 
 $('#submit-btn').click(function(){
 	
